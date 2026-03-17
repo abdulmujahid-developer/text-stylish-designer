@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Privacy Policy - Text Stylish Repeater</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .privacy-card {
+            background: white;
+            max-width: 900px;
+            width: 100%;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            animation: slideUp 0.5s ease;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        
+        .header h1 span {
+            display: block;
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 8px;
+            opacity: 0.9;
+        }
+        
+        .header .app-name {
+            font-size: 24px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            font-weight: 500;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 25px;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section h2::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 4px;
+            display: inline-block;
+        }
+        
+        .section h3 {
+            color: #555;
+            font-size: 18px;
+            margin: 15px 0 10px;
+            font-weight: 500;
+        }
+        
+        .section p {
+            color: #666;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        
+        .section ul, .section ol {
+            margin: 10px 0 10px 25px;
+            color: #666;
+        }
+        
+        .section li {
+            margin-bottom: 8px;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #667eea;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #667eea;
+        }
+        
+        .highlight {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #667eea;
+        }
+        
+        .highlight p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .dev-info {
+            background: linear-gradient(135deg, #667eea10 0%, #764ba210 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        
+        .dev-info p {
+            margin-bottom: 5px;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 25px 30px;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+        
+        .footer p {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .footer .links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .footer .links a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        
+        .footer .links a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+        
+        .last-updated {
+            background: #f0f0f0;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 13px;
+            color: #666;
+            margin-top: 15px;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .header .app-name {
+                font-size: 18px;
+            }
+            
+            .content {
+                padding: 25px 20px;
+            }
+            
+            .section h2 {
+                font-size: 20px;
+            }
+            
+            .section p {
+                font-size: 15px;
+            }
+            
+            .badge {
+                font-size: 12px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .header h1 {
+                font-size: 22px;
+            }
+            
+            .header .app-name {
+                font-size: 16px;
+            }
+            
+            .content {
+                padding: 20px 15px;
+            }
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .privacy-card {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .header {
+                background: #f8f9fa;
+                color: #333;
+            }
+            
+            .footer {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="privacy-card">
+        <div class="header">
+            <h1>
+                Privacy Policy
+                <span>Your Privacy Matters to Us</span>
+            </h1>
+            <div class="app-name">Text Stylish Repeater - Font Gen</div>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>Introduction</h2>
+                <p>Welcome to <strong>Text Stylish Repeater - Font Gen</strong>. This privacy policy explains how we collect, use, and protect your personal information when you use our mobile application.</p>
+                
+                <div class="highlight">
+                    <p><strong>Quick Summary:</strong> We respect your privacy. Most of our app features work offline, and we only collect necessary data to serve ads and improve your experience.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Developer Information</h2>
+                <div class="dev-info">
+                    <p><strong>Developer Name:</strong> Abdul Mujahid</p>
+                    <p><strong>App Name:</strong> Text Stylish Repeater - Font Gen</p>
+                    <p><strong>Package Name:</strong> com.abdulmujahid.textstylishrepeater</p>
+                    <p><strong>Contact Email:</strong> abdulmujahid.developer@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Information We Collect</h2>
+                
+                <h3>📱 Automatically Collected Information</h3>
+                <ul>
+                    <li><strong>Device Information:</strong> Device model, operating system version, screen resolution</li>
+                    <li><strong>App Usage Data:</strong> How you interact with our app features</li>
+                    <li><strong>Crash Reports:</strong> Anonymous crash data to fix bugs</li>
+                </ul>
+                
+                <h3>📝 User-Provided Information</h3>
+                <ul>
+                    <li><strong>Text Input:</strong> Text you type in the app (stored locally only)</li>
+                    <li><strong>Generated Content:</strong> All styling and repeating happens on your device</li>
+                </ul>
+                
+                <div class="highlight">
+                    <p><strong>Note:</strong> We do NOT collect any personally identifiable information (PII) like your name, email, address, or phone number.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>📢 Advertising (AdMob)</h2>
+                <p>Our app uses Google AdMob to display ads. AdMob may collect and use data as described in their privacy policy.</p>
+                
+                <h3>AdMob Collects:</h3>
+                <ul>
+                    <li>IP address</li>
+                    <li>Device identifiers (like Advertising ID)</li>
+                    <li>App usage data</li>
+                    <li>Location (if enabled on device)</li>
+                </ul>
+                
+                <h3>Why We Show Ads:</h3>
+                <p>Ads help us keep the app free for everyone. You can choose to support us by watching rewarded ads to unlock premium features.</p>
+                
+                <div class="badge"> Admob Ads</div>
+                <div class="badge"> Rewarded , Native , Intertitial , Banner</div>
+                
+                <p><strong>Learn more:</strong> <a href="https://policies.google.com/technologies/ads" target="_blank" style="color: #667eea;">Google Advertising Policy</a></p>
+            </div>
+            
+            <div class="section">
+                <h2>🔓 Unlock & Rewards System</h2>
+                <p>Our app offers premium font styles that can be unlocked:</p>
+                <ul>
+                    <li><strong>Free Styles:</strong> Always available without any unlock</li>
+                    <li><strong>Locked Styles:</strong> Unlock by watching rewarded ads (24-hour access)</li>
+                    <li><strong>Renewals:</strong> You can renew unlocked styles up to 7 times per day</li>
+                </ul>
+                <p>Unlock information is stored locally on your device using SharedPreferences. No server storage.</p>
+            </div>
+            
+            <div class="section">
+                <h2>💾 Data Storage</h2>
+                
+                <h3>Local Storage</h3>
+                <ul>
+                    <li><strong>Theme Preferences:</strong> Your chosen theme (dark/light/system)</li>
+                    <li><strong>Unlock Status:</strong> Which styles you've unlocked and expiry time</li>
+                    <li><strong>Ad Counters:</strong> How many times you've used free features</li>
+                </ul>
+                
+                <h3>No External Storage</h3>
+                <p>We do NOT upload any data to external servers. All your text, generated content, and preferences stay on your device.</p>
+            </div>
+            
+            <div class="section">
+                <h2>🔐 Permissions</h2>
+                
+                <h3>Internet Permission</h3>
+                <p><strong>android.permission.INTERNET</strong> - Required for loading ads from AdMob.</p>
+                
+                <h3>Network State</h3>
+                <p><strong>android.permission.ACCESS_NETWORK_STATE</strong> - To check if you're online before showing ads.</p>
+                
+                <p>We do NOT request any sensitive permissions like camera, microphone, contacts, or location.</p>
+            </div>
+            
+            <div class="section">
+                <h2>👤 User Rights</h2>
+                <p>You have the right to:</p>
+                <ul>
+                    <li><strong>Opt-out of Ads:</strong> You can reset your Advertising ID in device settings</li>
+                    <li><strong>Clear Data:</strong> Clear app data from device settings to remove all preferences</li>
+                    <li><strong>Uninstall:</strong> Remove the app anytime to delete all local data</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>📤 Third-Party Services</h2>
+                <p>Our app uses the following third-party services:</p>
+                <ul>
+                    <li><strong>Google AdMob</strong> - For displaying advertisements
+                        <br><a href="https://policies.google.com/privacy" target="_blank" style="color: #667eea;">AdMob Privacy Policy</a>
+                    </li>
+                    <li><strong>Google Play Services</strong> - For app functionality
+                        <br><a href="https://policies.google.com/privacy" target="_blank" style="color: #667eea;">Google Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>🧒 Children's Privacy</h2>
+                <p>Our app is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you are a parent and believe your child has provided us with information, please contact us.</p>
+            </div>
+            
+            <div class="section">
+                <h2>🌐 Changes to This Policy</h2>
+                <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. Changes are effective immediately after posting.</p>
+                
+                <div class="last-updated">
+                    Last Updated: March 17, 2026
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>📞 Contact Us</h2>
+                <p>If you have any questions about this Privacy Policy, please contact us:</p>
+                
+                <div class="dev-info">
+                    <p><strong>Developer:</strong> Abdul Mujahid</p>
+                    <p><strong>Email:</strong> 9090muhammadsaad@gmail.com</p>
+                    <p><strong>App:</strong> Text Stylish Repeater - Font Gen</p>
+                    <p><strong>Package:</strong> com.abdulmujahid.textstylishrepeater</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2026 Text Stylish Repeater - Font Gen. All rights reserved.</p>
+            <p>Developed with ❤️ by Abdul Mujahid</p>
+            
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="mailto: 9090muhammadsaad@gmail.com">Contact</a>
+            </div>
+            
+            <p style="margin-top: 20px; font-size: 12px;">
+                App Version: 1.0.0 | Package: com.abdulmujahid.textstylishrepeater
+            </p>
+        </div>
+    </div>
+</body>
+</html>
